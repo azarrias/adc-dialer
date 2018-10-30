@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
     public void llamar(View view) {
         Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse("tel:9998767"));
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
             //    ActivityCompat#requestPermissions
             // here to request the missing permissions, and then overriding
@@ -31,5 +32,14 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         startActivity(intent);
+    }
+
+    public void loadURL(View view) {
+        Intent i = new Intent();
+        i.setAction(Intent.ACTION_VIEW);
+        i.setData(Uri.parse("http://www.google.com"));
+        i.addCategory(Intent.CATEGORY_DEFAULT);
+
+        startActivity(i);
     }
 }

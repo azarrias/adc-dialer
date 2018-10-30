@@ -1,4 +1,5 @@
 <resources>
-    <string name="app_name">Telefonia</string>
-    <string name="llamarPorTelefono">Llamar por teléfono</string>
+    <string name="app_name">My dialer</string>
+    <string name="makePhonecall">Make a phone call</string>
+    <string name="strLoadURL">Open URL</string>
 </resources>
